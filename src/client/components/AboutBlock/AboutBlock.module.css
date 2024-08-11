@@ -1,0 +1,64 @@
+.aboutWrapper {
+  background-color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  height: 74vh;
+  flex-direction: column;
+}
+
+.aboutTextBlock {
+  max-width: 389px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.aboutImage {
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 74vh;
+  width: 70vw;
+  opacity: 0.9;
+}
+
+.boxContent {
+  max-width: 1154px;
+  width: 1154px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  padding-bottom: 20px;
+  gap: 8px;
+  color: white;
+  position: relative;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  max-width: 274px;
+  justify-content: center;
+  align-items: center;
+}
+
+.cardText {
+  text-align: center;
+  font-size: 20px !important;
+  font-weight: bold !important;
+  line-height: 25px !important;
+}
+
+.videoBlock {
+  height: 419px;
+  width: 1177px;
+  gap: 20px;
+}
+
+.aboutTextBlockDescroption {
+  line-height: normal;
+  letter-spacing: 0;
+}

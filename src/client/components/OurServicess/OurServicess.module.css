@@ -1,0 +1,14 @@
+.outServicessWrapper {
+  background-image: url(../../assets/OurServicess.png);
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  background-color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  height: 80vh;
+  flex-direction: column;
+}

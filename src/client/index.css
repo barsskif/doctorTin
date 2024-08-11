@@ -1,0 +1,24 @@
+@import "tailwindcss/base";
+
+@import "tailwindcss/components";
+
+@import "tailwindcss/utilities";
+
+@font-face {
+  font-family: "GolosTextRegular";
+  src: url("./client/assets/fonts/GolosText-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  font-family: "GolosTextRegular", sans-serif;
+}
+
+#root {
+  background-color: #000000;
+  color: #ffffff;
+}

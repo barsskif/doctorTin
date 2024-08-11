@@ -1,0 +1,41 @@
+.rootWrapper {
+  background-image: url(../assets/bg.png);
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.boxContent {
+  height: 65vh;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  padding-bottom: 20px;
+  gap: 200px;
+  position: relative;
+}
+
+.formWrapper {
+  height: 213px;
+  width: 412px;
+  background-image: url(../assets/FormBg.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-radius: 15px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  padding: 14px 14px 14px 0px;
+  gap: 8px;
+
+  .formTitle {
+    font-weight: 700;
+    font-size: 16px;
+    max-width: 67%;
+  }
+}
