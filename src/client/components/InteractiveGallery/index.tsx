@@ -1,18 +1,16 @@
-import React, { ReactNode, useState } from "react";
+import React, { useState, ReactElement, ReactNode } from "react";
+import { getCardStyle } from "../../../helpers/getCardStyle";
+
 import NextIcon from "../../assets/NextIcon.svg?react";
 import PrevIcon from "../../assets/PrevIcon.svg?react";
+
+import type { ICardProps, ICarouselProps } from "./@types";
+
 import classes from "./InteractiveGallery.module.css";
 
 const CARDS = 10;
-const MAX_VISIBILITY = 3;
 
-interface CardProps {
-  title: string;
-  content: string;
-  price: string;
-}
-
-const Card = ({ title, content, price }: CardProps) => (
+const Card = ({ title, content, price }: ICardProps): ReactElement => (
   <div className={classes.card}>
     <h2>{title}</h2>
     <p style={{ textAlign: "center", maxWidth: "300px" }}>{content}</p>
@@ -21,21 +19,31 @@ const Card = ({ title, content, price }: CardProps) => (
   </div>
 );
 
-interface CarouselProps {
-  children: ReactNode;
-}
+const NavigationButton = ({
+  icon,
+  onClick,
+  className,
+}: {
+  icon: ReactNode;
+  onClick: () => void;
+  className: string;
+}): ReactElement => (
+  <button className={className} onClick={onClick}>
+    {icon}
+  </button>
+);
 
-const Carousel = ({ children }: CarouselProps) => {
-  const [active, setActive] = useState(0);
-  const count = React.Children.count(children);
+const Carousel = ({ children }: ICarouselProps): ReactElement => {
+  const [active, setActive] = useState<number>(0);
+  const count: number = React.Children.count(children);
 
-  const handleNext = () => {
+  const handleNext = (): void => {
     if (active < count - 1) {
       setActive(i => i + 1);
     }
   };
 
-  const handlePrev = () => {
+  const handlePrev = (): void => {
     if (active > 0) {
       setActive(i => i - 1);
     }
@@ -44,33 +52,13 @@ const Carousel = ({ children }: CarouselProps) => {
   return (
     <div className={classes.carousel}>
       {active > 0 && (
-        <button className={`${classes.nav} ${classes.left}`} onClick={handlePrev}>
-          <PrevIcon />
-        </button>
+        <NavigationButton icon={<PrevIcon />} onClick={handlePrev} className={`${classes.nav} ${classes.left}`} />
       )}
       {active < count - 1 && (
-        <button className={`${classes.nav} ${classes.right}`} onClick={handleNext}>
-          <NextIcon />
-        </button>
+        <NavigationButton icon={<NextIcon />} onClick={handleNext} className={`${classes.nav} ${classes.right}`} />
       )}
-      {React.Children.map(children, (child, i) => (
-        <div
-          className={classes["card-container"]}
-          style={
-            {
-              "--active": i === active ? 1 : 0.7,
-              "--offset": (active - i) / 3,
-              "--direction": Math.sign(active - i),
-              "--abs-offset": Math.abs(active - i) / 3,
-              "--z-index": i === active ? -1 : 0,
-              pointerEvents: active === i ? "auto" : "none",
-              opacity: Math.abs(active - i) >= MAX_VISIBILITY ? "0.3" : "1",
-              display: Math.abs(active - i) > MAX_VISIBILITY ? "none" : "block",
-              margin: i !== active ? "10px" : "",
-              marginTop: i !== active ? "-100px" : "",
-            } as React.CSSProperties
-          }
-        >
+      {React.Children.map(children, (child: ReactNode, i: number) => (
+        <div className={classes["card-container"]} style={getCardStyle({ isActive: i === active, offset: active - i })}>
           {child}
         </div>
       ))}
@@ -78,17 +66,15 @@ const Carousel = ({ children }: CarouselProps) => {
   );
 };
 
-export const InteractiveGallery = () => {
-  return (
-    <Carousel>
-      {[...new Array(CARDS)].map((_, i) => (
-        <Card
-          key={i}
-          title="Удаление вмятин"
-          content="Удаление вмятин с использованием специального инструмента без покраски кузовного элемента (технология pdr)"
-          price="4000р"
-        />
-      ))}
-    </Carousel>
-  );
-};
+export const InteractiveGallery = (): ReactElement => (
+  <Carousel>
+    {[...Array(CARDS)].map((_, i: number) => (
+      <Card
+        key={i}
+        title="Удаление вмятин"
+        content="Удалениe вмятин с использованием специального инструмента без покраски кузовного элемента (технология pdr)"
+        price="4000р"
+      />
+    ))}
+  </Carousel>
+);
