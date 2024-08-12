@@ -1,7 +1,7 @@
 import { jsx, jsxs, Fragment } from "react/jsx-runtime";
 import ReactDOMServer from "react-dom/server";
 import { StaticRouter } from "react-router-dom/server.mjs";
-import { Box, Text, Button } from "@mantine/core";
+import { Box, Text, Button, createTheme, MantineProvider } from "@mantine/core";
 import * as React from "react";
 import React__default, { useState } from "react";
 const input = "_input_14r8b_1";
@@ -390,9 +390,10 @@ const App = () => {
   ] });
 };
 const index = "";
+const theme = createTheme({});
 function render(url) {
   return ReactDOMServer.renderToString(
-    /* @__PURE__ */ jsx(StaticRouter, { location: url, children: /* @__PURE__ */ jsx(App, {}) })
+    /* @__PURE__ */ jsx(MantineProvider, { theme, children: /* @__PURE__ */ jsx(StaticRouter, { location: url, children: /* @__PURE__ */ jsx(App, {}) }) })
   );
 }
 export {
