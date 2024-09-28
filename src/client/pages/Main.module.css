@@ -39,3 +39,26 @@
     max-width: 67%;
   }
 }
+
+
+@media (max-width: 768px) {
+  .boxContent {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px; 
+  }
+
+  .formWrapper {
+    width: 90%;
+    height: auto;
+    padding: 14px;
+  }
+
+  .formTitle {
+    font-size: 14px;
+  }
+
+  .rootWrapper {
+    padding: 10px; /* добавляем отступ по краям для мобильных */
+  }
+}
