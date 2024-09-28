@@ -11,11 +11,15 @@
   font-style: normal;
 }
 
+/* *{
+  outline: 1px solid red;
+} */
+
 body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-
   font-family: "GolosTextRegular", sans-serif;
+  
 }
 
 #root {

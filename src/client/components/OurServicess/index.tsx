@@ -1,17 +1,21 @@
+import { ReactElement } from "react";
+
 import { Box } from "@mantine/core";
 
-import classes from "./OurServicess.module.css";
 import { InteractiveGallery } from "../InteractiveGallery";
 
-export const OurServicess = () => {
+import classes from "./OurServicess.module.css";
+
+export const OurServicess = (): ReactElement => {
   return (
     <Box className={classes.outServicessWrapper}>
       <h2
         style={{
           margin: 0,
+          textTransform: "uppercase",
         }}
       >
-        НАШИ УСЛУГИ
+        наши услуги
       </h2>
       <h3
         style={{
@@ -20,7 +24,7 @@ export const OurServicess = () => {
           margin: 0,
         }}
       >
-        Покраска и кузовной ремонт автомобилей в Нижнем Новгороде
+        Покраска и кузовной ремонт автомобилей в Ставрополе.
       </h3>
 
       <InteractiveGallery />
