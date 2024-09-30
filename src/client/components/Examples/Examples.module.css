@@ -1,0 +1,142 @@
+.container {
+    position: relative;
+    width: 100%;
+    max-width: 2005px;
+    margin: 0 auto;
+    background-color: #000;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 34px 20px 0 20px;
+}
+
+.title {
+    font-family: 'Golos', sans-serif;
+    font-weight: 700;
+    font-size: 60px;
+    line-height: 72px;
+    color: #ffffff;
+}
+
+.moreWorks {
+    font-family: 'SF Pro Display', sans-serif;
+    font-weight: 500;
+    font-size: 30px;
+    line-height: 35.8px;
+    text-align: right;
+    color: #cdcdcd;
+}
+
+.mainContent {
+    /* position: relative; */
+    padding: 0 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.backgroundColor {
+    content: "";
+    width: 100%;
+    height: 500px;
+    background: url('./assets/frame-1-1.svg') no-repeat center center / cover;
+    position: absolute;
+    top: 100px;
+    left: 0;
+    right: 0;
+    z-index: -1;
+}
+
+.textContainer {
+    margin-top: 100px;
+}
+
+.subtitle {
+    font-family: 'SF Pro Display', sans-serif;
+    font-weight: 400;
+    font-size: 30px;
+    line-height: 35.8px;
+    color: #ffffff;
+}
+
+.description {
+    font-family: 'SF Pro Display', sans-serif;
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 21.48px;
+    color: #ffffff;
+    margin-top: 20px;
+}
+
+.line1,
+.line2 {
+    position: absolute;
+    left: 827px;
+    top: 452px;
+}
+
+.arrowDown {
+    position: absolute;
+    top: 302px;
+    left: 125px;
+}
+
+.ellipseContainer {
+    position: absolute;
+    top: 328px;
+    left: 827px;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.imageBefore {
+    position: absolute;
+    width: 472px;
+    height: 355px;
+    top: 216px;
+    left: 1372px;
+}
+
+.imageAfter {
+    position: absolute;
+    width: 486px;
+    height: 355px;
+    top: 487px;
+    left: 1519px;
+}
+
+.labelBefore {
+    position: absolute;
+    top: 365px;
+    left: 1315px;
+    font-family: 'SF Pro Display', sans-serif;
+    font-weight: 700;
+    font-size: 43px;
+    color: #ffffff;
+}
+
+.labelAfter {
+    position: absolute;
+    top: 637px;
+    left: 1456px;
+    font-family: 'SF Pro Display', sans-serif;
+    font-weight: 700;
+    font-size: 43px;
+    color: #ffffff;
+}
+
+.instagramIcon {
+    position: absolute;
+    top: 158px;
+    left: 1916px;
+}
+
+.arrowDownIcon {
+    position: absolute;
+    top: 302px;
+    left: 1275px;
+}

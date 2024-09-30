@@ -5,6 +5,9 @@ import { AboutBlock } from "../components/AboutBlock";
 import { OurServicess } from "../components/OurServicess";
 
 import classes from "./Main.module.css";
+import { RequestForm } from "../components/RequestForm";
+import { FormSection } from "../components/FormSection";
+import { Examples } from "../components/Examples";
 
 const Main = () => {
   return (
@@ -81,6 +84,9 @@ const Main = () => {
       </Box>
       <AboutBlock />
       <OurServicess />
+      {/* <Examples /> */}
+      <RequestForm />
+      <FormSection />
     </>
   );
 };
