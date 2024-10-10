@@ -1,0 +1,30 @@
+graph TD
+    A[src] --> B[app]
+    A --> C[entities]
+    A --> D[features]
+    A --> E[widgets]
+    A --> F[shared]
+
+    B --> B1[App.tsx]
+    B --> B2[store.ts]
+    B --> B3[index.tsx]
+
+    C --> C1[task]
+    C1 --> C1a[model]
+    C1a --> C1a1[task.ts]
+    C1a --> C1a2[taskSlice.ts]
+
+    D --> D1[NewTaskForm]
+    D --> D2[TaskFilter]
+    D1 --> D1a[ui]
+    D1a --> D1a1[NewTaskForm.tsx]
+    D2 --> D2a[ui]
+    D2a --> D2a1[TaskFilter.tsx]
+
+    E --> E1[TaskList]
+    E1 --> E1a[ui]
+    E1a --> E1a1[TaskList.tsx]
+
+    F --> F1[api]
+    F --> F2[lib]
+    F --> F3[ui]

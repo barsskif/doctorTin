@@ -20,9 +20,8 @@
 
 .phoneImage {
     position: absolute;
-    top: 170px;
-    left: 80%;
-    transform: translateX(-50%);
+    bottom: 0;
+    right: 25px;
     width: 466px;
     height: 602px;
 }
@@ -43,15 +42,23 @@
 
 .description {
     font-weight: 500;
-    font-size: 27px;
+    font-size: 25px;
     line-height: 32.22px;
     margin-bottom: 32px;
+    max-width: 70%;
+}
+
+.linkMail {
+    color: inherit;
+    text-decoration: none;
 }
 
 .phoneNumber {
     font-weight: 700;
     font-size: 41px;
     line-height: 48.93px;
+    color: inherit;
+    text-decoration: none;
 }
 
 .contactForm {
@@ -80,7 +87,7 @@
     border: none;
     padding: 10px;
     box-sizing: border-box;
-    color: white;
+    
 }
 
 .buttonGroup {

@@ -1,6 +1,6 @@
 export const CARDS = [
   {
-    number: 5,
+    number: 15,
     text: "высококлассных специалистов, имеющих сертификаты",
   },
   {
@@ -8,8 +8,8 @@ export const CARDS = [
     text: "клиентов уже выбрали нас и остались довольны",
   },
   {
-    number: 4,
-    text: "года успешных работ по покраске",
+    number: 8,
+    text: "лет успешных работ по покраске",
   },
   {
     number: 6,
@@ -18,9 +18,7 @@ export const CARDS = [
 ];
 
 export const ABOUT_TEXT = `
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex
-ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat
-nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit
-anim id est laborum
+Более чем 8-летний опыт кузовного ремонта автомобилей, применение специализированной покрасочной камеры, а так же немецких лакокрасочных материалов ВАSF позволяет дать гарантию на покраску Вашего автомобиля в 4 раза выше, чем у официального дилера!
+
+Ремонт автомобиля в центре кузовного ремонта «Доктор Жесть» это не банальное осваивание бюджета клиента, а комплексный подход по приведению внешнего вида Вашего автомобиля в отличное состояние при оптимальных расходах!
 `;

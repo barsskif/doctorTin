@@ -21,7 +21,7 @@
   top: 0;
   right: 0;
   height: 74vh;
-  width: 70vw;
+  width: 100%;
   opacity: 0.9;
 }
 
@@ -35,7 +35,6 @@
   gap: 8px;
   color: white;
   position: relative;
-  flex-wrap: wrap; /* Делаем контент оборачиваемым */
 }
 
 .card {
