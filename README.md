@@ -22,3 +22,5 @@ To start the native vite client.
 yarn build
 yarn serve
 ```
+
+prod start => pm2 start npm --name my-app -- run serve
