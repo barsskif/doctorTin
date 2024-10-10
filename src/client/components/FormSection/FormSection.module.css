@@ -1,6 +1,6 @@
 .formSection {
     display: flex;
-    background-image: url('../assets/red-color-powder-explosion-black-background-red-dust-particles-splashing-1.svg');
+    background-image: url('../../../../assets/red-color-bg.svg');
     background-size: cover;
     height: 716px;
     align-items: center;
