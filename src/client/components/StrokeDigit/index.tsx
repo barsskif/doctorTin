@@ -1,7 +1,7 @@
 interface IStrokeDigitProps {
-  digit: number;
-  strokeWidth?: number;
-  fontSize?: number;
+    digit: number | string;
+    strokeWidth?: number;
+    fontSize?: number;
 }
 
 export const StrokeDigit = ({ digit, strokeWidth = 2, fontSize = 64 }: IStrokeDigitProps) => {
@@ -40,7 +40,7 @@ export const StrokeDigit = ({ digit, strokeWidth = 2, fontSize = 64 }: IStrokeDi
         fontSize={fontSize}
         filter="url(#shadow)"
       >
-        {digit}
+        {String(digit)}
       </text>
     </svg>
   );

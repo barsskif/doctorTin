@@ -1,9 +1,9 @@
 import type { ReactNode } from "react";
 
 export interface ICardProps {
-    title: string;
+    title?: string;
     content: string;
-    price: string;
+    price?: string;
   }
   
 export  interface ICarouselProps {

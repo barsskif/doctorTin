@@ -5,8 +5,30 @@ import { AboutBlock } from "../components/AboutBlock";
 import { OurServicess } from "../components/OurServicess";
 
 import classes from "./Main.module.css";
+import { RequestForm } from "../components/RequestForm";
+import { FormSection } from "../components/FormSection";
+import { Examples } from "../components/Examples";
+import React, { ChangeEvent, useState } from "react";
+
+const initFormState = {
+  name: '',
+  phone: '',
+}
 
 const Main = () => {
+  const [formState, setFormState] = useState(initFormState)
+
+  const handleChange = (e: ChangeEvent<HTMLInputElement>, key: 'name' | 'phone') => {
+      const value = e.target.value
+      setFormState(prev => ({ ...prev, [key]: value }))
+  }
+
+  const handleSubmit = (e: React.MouseEvent<HTMLButtonElement, MouseEvent>) => {
+      e.preventDefault()
+      setFormState(initFormState)
+  }
+
+  
   return (
     <>
       <Box className={classes.rootWrapper} >
@@ -63,8 +85,8 @@ const Main = () => {
           </Box>
           <Box component="form" className={classes.formWrapper}>
             <Text className={classes.formTitle}>Получить окраску 3ей детали в подарок</Text>
-            <CustomInput placeholder="имя" />
-            <CustomInput placeholder="Телефон" />
+            <CustomInput placeholder="имя" cb={(event) => handleChange(event, 'name')} value={formState.name}/>
+            <CustomInput placeholder="Телефон"  cb={(event) => handleChange(event, 'phone')} value={formState.phone}/>
 
             <Button
               color="#900000"
@@ -73,6 +95,7 @@ const Main = () => {
                 margin: "0 auto",
                 height: "46px",
               }}
+              onClick={handleSubmit}
             >
               Оставить заявку
             </Button>
@@ -81,6 +104,10 @@ const Main = () => {
       </Box>
       <AboutBlock />
       <OurServicess />
+   
+      <RequestForm />
+      {/* <Examples /> */}
+      <FormSection />
     </>
   );
 };

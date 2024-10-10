@@ -12,3 +12,14 @@
   justify-content: center;
   gap: 10px;
 }
+
+.linkMail{
+  color: inherit;
+  text-decoration: none;
+}
+
+
+.phoneNumber{
+  color: inherit;
+  text-decoration: none;
+}

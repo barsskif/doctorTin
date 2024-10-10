@@ -7,15 +7,15 @@ import PrevIcon from "../../assets/PrevIcon.svg?react";
 import type { ICardProps, ICarouselProps } from "./@types";
 
 import classes from "./InteractiveGallery.module.css";
+import {CARDS} from './constants'
 
-const CARDS = 10;
 
 const Card = ({ title, content, price }: ICardProps): ReactElement => (
   <div className={classes.card}>
     <h2>{title}</h2>
     <p style={{ textAlign: "center", maxWidth: "300px" }}>{content}</p>
-    <p>Цены</p>
-    <p>от {price}</p>
+    <p>{price && "Цены"}</p>
+    <p>{price}</p>
   </div>
 );
 
@@ -34,7 +34,7 @@ const NavigationButton = ({
 );
 
 const Carousel = ({ children }: ICarouselProps): ReactElement => {
-  const [active, setActive] = useState<number>(0);
+  const [active, setActive] = useState<number>(1);
   const count: number = React.Children.count(children);
 
   const handleNext = (): void => {
@@ -68,12 +68,12 @@ const Carousel = ({ children }: ICarouselProps): ReactElement => {
 
 export const InteractiveGallery = (): ReactElement => (
   <Carousel>
-    {[...Array(CARDS)].map((_, i: number) => (
+    {CARDS.map(({content, price, title}, i: number) => (
       <Card
         key={i}
-        title="Удаление вмятин"
-        content="Удалениe вмятин с использованием специального инструмента без покраски кузовного элемента (технология pdr)"
-        price="4000р"
+        title={title}
+        content={content}
+        price={price}
       />
     ))}
   </Carousel>

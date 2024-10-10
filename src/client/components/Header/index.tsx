@@ -15,13 +15,13 @@ export const Header = () => {
         >
           Доктор жесть
         </span>
-        <span>Еmail: D.Nesterov@mail.ru</span>
+        <span><a href="mailto:D.Nesterov@mail.ru" className={classes.linkMail}>Еmail: D.Nesterov@mail.ru</a></span>
       </Box>
       <Box>
         <VkIconSvg />
       </Box>
       <Box className={classes.wrapperBox} style={{ textAlign: "right" }}>
-        <span>+7 (962) 440-05-80</span>
+        <span><a href='tel:+79624400580' className={classes.phoneNumber}>+7 (962) 440-05-80</a></span>
         <span>г.Ставрополь, ул.Шпаковская, 97</span>
       </Box>
     </header>
