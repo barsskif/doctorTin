@@ -43,7 +43,7 @@ export const AboutBlock = () => {
           >
             О нас за 60 секунд
           </Text>
-          <Text className={classes.aboutTextBlockDescroption} styles={{ root: { fontSize: "0.875rem" } }}>
+          <Text className={classes.aboutTextBlockDescroption} styles={{ root: { fontSize: "1.0rem", fontWeight: "600", color:'#fff5f5' } }}>
             {ABOUT_TEXT}
           </Text>
         </Box>

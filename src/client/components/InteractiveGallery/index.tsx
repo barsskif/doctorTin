@@ -12,10 +12,10 @@ import {CARDS} from './constants'
 
 const Card = ({ title, content, price }: ICardProps): ReactElement => (
   <div className={classes.card}>
-    <h2>{title}</h2>
-    <p style={{ textAlign: "center", maxWidth: "300px" }}>{content}</p>
-    <p>{price && "Цены"}</p>
-    <p>{price}</p>
+    {/* <h2>{title}</h2> */}
+    <p style={{ textAlign: "center", maxWidth: "300px" }}>{title}</p>
+    <p>{price && <>Цена: {price}</>}</p>
+    {/* <p>{price}</p> */}
   </div>
 );
 
@@ -68,11 +68,11 @@ const Carousel = ({ children }: ICarouselProps): ReactElement => {
 
 export const InteractiveGallery = (): ReactElement => (
   <Carousel>
-    {CARDS.map(({content, price, title}, i: number) => (
+    {CARDS.map(({price, name}, i: number) => (
       <Card
         key={i}
-        title={title}
-        content={content}
+        title={name}
+        content={''}
         price={price}
       />
     ))}

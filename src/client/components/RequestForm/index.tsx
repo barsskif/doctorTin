@@ -31,13 +31,12 @@ export const RequestForm: React.FC = () => {
     
     return (
         <>
-        <div className={styles.app} style={{ backgroundImage: `url(${background})` }}>
+        <div className={styles.app} style={{ backgroundImage: `url(${background})`, filter: 'grayscale(50%)' }}>
             <img src={ellipse} className={styles.ellipse} alt="ellipse background" />
             <div className={styles.headerSection}>
                 <h1 className={styles.title}>Оценка стоимости ремонта по фото</h1>
                 <p className={styles.description}>
-                    Отправьте фото поврежденной детали нам через WhatsApp на номер или на
-                    электронную почту <a href="mailto:D.Nesterov@mail.ru" className={styles.linkMail}>D.Nesterov@mail.ru</a> и наши мастера оценят примерную стоимость ремонта
+                    Отправьте фото поврежденной детали нам через WhatsApp  и наши специалисты оценят примерную стоимость ремонта
                 </p>
                 <a className={styles.phoneNumber} href='tel:+79624400580'>+7 (962) 440-05-80</a>
             </div>
