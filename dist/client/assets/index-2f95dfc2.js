@@ -11059,7 +11059,7 @@ const About = "/assets/aboutBg-9a05895e.png";
 const CARDS$1 = [
   {
     number: 15,
-    text: "высококлассных специалистов, имеющих сертификаты"
+    text: "высококлассных специалистов"
   },
   {
     number: 927,
@@ -11070,8 +11070,8 @@ const CARDS$1 = [
     text: "лет успешных работ по покраске"
   },
   {
-    number: 6,
-    text: "месяцев гарантии на все выполненные работы"
+    number: 18,
+    text: "месяцев гарантии, что в 3 раза больше чем у дилера"
   }
 ];
 const ABOUT_TEXT = `
@@ -11079,14 +11079,14 @@ const ABOUT_TEXT = `
 
 Ремонт автомобиля в центре кузовного ремонта «Доктор Жесть» это не банальное осваивание бюджета клиента, а комплексный подход по приведению внешнего вида Вашего автомобиля в отличное состояние при оптимальных расходах!
 `;
-const aboutWrapper = "_aboutWrapper_10icg_1";
-const aboutTextBlock = "_aboutTextBlock_10icg_11";
-const aboutImage = "_aboutImage_10icg_19";
-const boxContent$1 = "_boxContent_10icg_28";
-const card$1 = "_card_10icg_40";
-const cardText = "_cardText_10icg_48";
-const videoBlock = "_videoBlock_10icg_55";
-const aboutTextBlockDescroption = "_aboutTextBlockDescroption_10icg_61";
+const aboutWrapper = "_aboutWrapper_mxjc2_1";
+const aboutTextBlock = "_aboutTextBlock_mxjc2_11";
+const aboutImage = "_aboutImage_mxjc2_19";
+const boxContent$1 = "_boxContent_mxjc2_30";
+const card$1 = "_card_mxjc2_42";
+const cardText = "_cardText_mxjc2_50";
+const videoBlock = "_videoBlock_mxjc2_57";
+const aboutTextBlockDescroption = "_aboutTextBlockDescroption_mxjc2_63";
 const classes$5 = {
   aboutWrapper,
   aboutTextBlock,
@@ -11132,7 +11132,7 @@ const AboutBlock = () => {
             children: "О нас за 60 секунд"
           }
         ),
-        /* @__PURE__ */ jsxRuntimeExports.jsx(Text, { className: classes$5.aboutTextBlockDescroption, styles: { root: { fontSize: "0.875rem" } }, children: ABOUT_TEXT })
+        /* @__PURE__ */ jsxRuntimeExports.jsx(Text, { className: classes$5.aboutTextBlockDescroption, styles: { root: { fontSize: "1.0rem", fontWeight: "600", color: "#fff5f5" } }, children: ABOUT_TEXT })
       ] })
     ] })
   ] });
@@ -11152,75 +11152,140 @@ const getCardStyle = ({ isActive, offset }) => ({
 });
 const SvgNextIcon = (props) => /* @__PURE__ */ reactExports.createElement("svg", { width: 51, height: 52, viewBox: "0 0 51 52", fill: "none", xmlns: "http://www.w3.org/2000/svg", ...props }, /* @__PURE__ */ reactExports.createElement("path", { fillRule: "evenodd", clipRule: "evenodd", d: "M12.75 25.9999C12.75 25.5689 12.9179 25.1556 13.2168 24.8509C13.5157 24.5461 13.9211 24.3749 14.3437 24.3749L32.8089 24.3749L25.9654 17.4004C25.8172 17.2493 25.6997 17.0699 25.6195 16.8725C25.5393 16.6751 25.498 16.4636 25.498 16.2499C25.498 16.0362 25.5393 15.8247 25.6195 15.6273C25.6997 15.4298 25.8172 15.2505 25.9654 15.0994C26.1136 14.9483 26.2895 14.8285 26.4831 14.7467C26.6767 14.6649 26.8842 14.6228 27.0937 14.6228C27.3033 14.6228 27.5108 14.6649 27.7044 14.7467C27.898 14.8285 28.0739 14.9483 28.2221 15.0994L37.7846 24.8494C37.933 25.0003 38.0508 25.1797 38.1311 25.3771C38.2115 25.5745 38.2528 25.7862 38.2528 25.9999C38.2528 26.2136 38.2115 26.4253 38.1311 26.6227C38.0508 26.8201 37.933 26.9995 37.7846 27.1504L28.2221 36.9004C28.0739 37.0515 27.898 37.1713 27.7044 37.2531C27.5108 37.3349 27.3033 37.377 27.0938 37.377C26.8842 37.377 26.6767 37.3349 26.4831 37.2531C26.2895 37.1713 26.1136 37.0515 25.9654 36.9004C25.6661 36.5953 25.498 36.1814 25.498 35.7499C25.498 35.5362 25.5393 35.3247 25.6195 35.1273C25.6997 34.9298 25.8172 34.7505 25.9654 34.5994L32.8089 27.6249L14.3437 27.6249C13.9211 27.6249 13.5157 27.4537 13.2168 27.1489C12.9179 26.8442 12.75 26.4309 12.75 25.9999Z", fill: "#808080" }));
 const SvgPrevIcon = (props) => /* @__PURE__ */ reactExports.createElement("svg", { width: 51, height: 52, viewBox: "0 0 51 52", fill: "none", xmlns: "http://www.w3.org/2000/svg", ...props }, /* @__PURE__ */ reactExports.createElement("path", { fillRule: "evenodd", clipRule: "evenodd", d: "M38.25 26.0001C38.25 26.4311 38.0821 26.8444 37.7832 27.1491C37.4843 27.4539 37.0789 27.6251 36.6562 27.6251L18.1911 27.6251L25.0346 34.5996C25.1828 34.7507 25.3003 34.93 25.3805 35.1275C25.4607 35.3249 25.502 35.5364 25.502 35.7501C25.502 35.9638 25.4607 36.1753 25.3805 36.3727C25.3003 36.5701 25.1828 36.7495 25.0346 36.9006C24.8864 37.0517 24.7105 37.1715 24.5169 37.2533C24.3233 37.3351 24.1158 37.3772 23.9062 37.3772C23.6967 37.3772 23.4892 37.3351 23.2956 37.2533C23.102 37.1715 22.9261 37.0517 22.7779 36.9006L13.2154 27.1506C13.067 26.9997 12.9492 26.8203 12.8689 26.6229C12.7885 26.4255 12.7471 26.2138 12.7471 26.0001C12.7471 25.7864 12.7885 25.5747 12.8689 25.3773C12.9492 25.1799 13.067 25.0005 13.2154 24.8496L22.7779 15.0996C22.9261 14.9485 23.102 14.8287 23.2956 14.7469C23.4892 14.6651 23.6967 14.623 23.9062 14.623C24.1158 14.623 24.3233 14.6651 24.5169 14.7469C24.7105 14.8287 24.8864 14.9485 25.0346 15.0996C25.3339 15.4047 25.502 15.8186 25.502 16.2501C25.502 16.4638 25.4607 16.6753 25.3805 16.8727C25.3003 17.0701 25.1828 17.2495 25.0346 17.4006L18.1911 24.3751L36.6562 24.3751C37.0789 24.3751 37.4843 24.5463 37.7832 24.8511C38.0821 25.1558 38.25 25.5691 38.25 26.0001Z", fill: "#808080" }));
-const carousel = "_carousel_9tdsj_7";
-const card = "_card_9tdsj_16";
-const nav = "_nav_9tdsj_58";
-const left = "_left_9tdsj_72";
-const right = "_right_9tdsj_76";
+const carousel = "_carousel_4e5of_7";
+const card = "_card_4e5of_16";
+const nav = "_nav_4e5of_58";
+const left = "_left_4e5of_72";
+const right = "_right_4e5of_79";
 const classes$4 = {
   carousel,
-  "card-container": "_card-container_9tdsj_16",
+  "card-container": "_card-container_4e5of_16",
   card,
   nav,
   left,
   right
 };
 const CARDS = [
-  {
-    title: "Покраска",
-    content: "Матовая покраска",
-    price: "от 10 000 ₽"
-  },
-  {
-    title: "Покраска",
-    content: "Покраска в хамелион",
-    price: "от 13 000 ₽"
-  },
-  {
-    title: "Покраска",
-    content: "Покраска деталей",
-    price: "от 10 000 ₽"
-  },
-  {
-    title: "Покраска",
-    content: "Полная покраска",
-    price: "от 150 000 ₽"
-  },
-  {
-    title: "Кузовные работы",
-    content: "рихтовка любой сложности, восстановление геометрии автомобиля, выправка парковочных вмятин без перекраски",
-    price: "оценка по факту"
-  },
-  {
-    title: "Кузовные работы",
-    content: `удаление вмятин от камней, орехов, каштанов и т.д.
-                настройка зазоров
-                настройка замков
-                предпокрасочная подготовка`,
-    price: "оценка по факту"
-  },
-  {
-    title: "Уход за ЛКП",
-    content: `абразивная полировка кузова (локальная и полная)
-                защита ЛКП кузова «Жидким стеклом» и «Керамикой» Кrytех
-                удаление неглубоких царапин
-                удаление сколов от камней
-               `,
-    price: "оценка по факту"
-  },
-  {
-    content: `А так же у нас можно приобрести расходные материалы:
-                - пленка для тонировки стекол и фар
-                - атермальная пленка
-                - пленка для бронирования автомобилей и автостекол
-               `
-  }
+  // {
+  //     title: "Покраска",
+  //     content: "Матовая покраска",
+  //     price: 'от 10 000 ₽'
+  // },
+  // {
+  //     title: "Покраска",
+  //     content: "Покраска в хамелион",
+  //     price: 'от 13 000 ₽'
+  // },
+  // {
+  //     title: "Покраска",
+  //     content: "Покраска деталей",
+  //     price: 'от 10 000 ₽'
+  // },
+  // {
+  //     title: "Покраска",
+  //     content: "Полная покраска",
+  //     price: 'от 150 000 ₽'
+  // },
+  // {
+  //     title: "Кузовные работы",
+  //     content: "рихтовка любой сложности, восстановление геометрии автомобиля, выправка парковочных вмятин без перекраски",
+  //     price: 'оценка по факту'
+  // },
+  // {
+  //     title: "Кузовные работы",
+  //     content: `удаление вмятин от камней, орехов, каштанов и т.д.
+  //             настройка зазоров
+  //             настройка замков
+  //             предпокрасочная подготовка`,
+  //     price: 'оценка по факту'
+  // },
+  // {
+  //     title: "Уход за ЛКП",
+  //     content: `абразивная полировка кузова (локальная и полная)
+  //             защита ЛКП кузова «Жидким стеклом» и «Керамикой» Кrytех
+  //             удаление неглубоких царапин
+  //             удаление сколов от камней
+  //            `,
+  //     price: 'оценка по факту'
+  // },
+  // {
+  //     content: `А так же у нас можно приобрести расходные материалы:
+  //             - пленка для тонировки стекол и фар
+  //             - атермальная пленка
+  //             - пленка для бронирования автомобилей и автостекол
+  //            `,
+  // },
+  { name: "Покраска бампера", price: "9000" },
+  { name: "Покраска крыла", price: "9000" },
+  { name: "Покраска детали", price: "9000" },
+  { name: "Покраска капота", price: "12000" },
+  { name: "Локальная покраска", price: "5000" },
+  { name: "Полная покраска авто", price: "150000" },
+  { name: "Ремонт бампера", price: "1000" },
+  { name: "Рихтовка вмятин на бампере", price: "1000" },
+  { name: "Замена крыши", price: "10000" },
+  { name: "Ремонт крыла с покраской", price: "9000" },
+  { name: "Восстановление геометрии кузова автомобиля", price: "1000" },
+  { name: "Подбор и Заправка автоэмали в аэрозольные баллончики", price: "1200" },
+  { name: "Заправка автоэмали заказчика в аэрозольный баллон", price: "400" },
+  { name: "Подбор краски для автомобилей (автоэмали)", price: "200" },
+  { name: "Аэрозольная краска автомобильная", price: "1200" },
+  { name: "Замена капота", price: "500" },
+  { name: "Ремонт крышки багажника", price: "1000" },
+  { name: "Постановка на стапель", price: "5000" },
+  { name: "Детейлинг", price: "10000" },
+  { name: "Полировка фар", price: "500" },
+  { name: "Химчистка", price: "4000" },
+  { name: "Полировка бампера", price: "500" },
+  { name: "Полировка кузова", price: "10000" },
+  { name: "Нанесение покрытия Ceramic Pro", price: "8000" },
+  { name: "Полировка детали", price: "500" },
+  { name: "Абразивная полировка кузова", price: "14000" },
+  { name: "Антикоррозийная обработка", price: "15000" },
+  { name: "Отогрев легковых автомобилей", price: "300" },
+  { name: "Ремонт стеклоподъемника", price: "1000" },
+  { name: "Замена зеркала бокового вида", price: "1500" },
+  { name: "Замена лобового стекла", price: "2500" },
+  { name: "Бронирование пленкой автомобиля", price: "5000" },
+  { name: "Оклейка антигравийной пленкой", price: "5000" },
+  { name: "Бронирование фар", price: "1500" },
+  { name: "Тонировка стекол", price: "3000" },
+  { name: "Удаление царапин без покраски", price: "1000" },
+  { name: "Сварочные работы кузова", price: "1000" },
+  { name: "Стапельные работы", price: "5000" },
+  { name: "Замена порогов автомобиля", price: "6000" },
+  { name: "Рихтовка кузова", price: "1000" },
+  { name: "Ремонт бамперов", price: "2000" },
+  { name: "Ремонт вмятин без покраски", price: "300" },
+  { name: "Ремонт пластиковых элементов", price: "500" },
+  { name: "Полировка царапин", price: "500" },
+  { name: "Полная полировка автомобилей", price: "10000" },
+  { name: "Антигравийная бронировочная пленка 3M VentureShield (USA) 610мм", price: "2990" },
+  { name: "Антигравийная бронировочная пленка 3M VentureShield (USA) 1520мм", price: "5890" },
+  { name: "Антигравийная бронировочная пленка 3M Scotchgard (USA) 610мм", price: "2950" },
+  { name: "Антигравийная бронировочная пленка 3M Scotchgard (USA) 1520мм", price: "7290" }
 ];
+const formatPrice = (price) => {
+  return price.toLocaleString("ru-RU", { style: "decimal", minimumFractionDigits: 0 }) + " ₽";
+};
 const Card = ({ title: title2, content: content2, price }) => /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: classes$4.card, children: [
-  /* @__PURE__ */ jsxRuntimeExports.jsx("h2", { children: title2 }),
-  /* @__PURE__ */ jsxRuntimeExports.jsx("p", { style: { textAlign: "center", maxWidth: "300px" }, children: content2 }),
-  /* @__PURE__ */ jsxRuntimeExports.jsx("p", { children: price && "Цены" }),
-  /* @__PURE__ */ jsxRuntimeExports.jsx("p", { children: price })
+  /* @__PURE__ */ jsxRuntimeExports.jsx(
+    "p",
+    {
+      style: {
+        textAlign: "center",
+        maxWidth: "300px",
+        fontWeight: "bold",
+        fontSize: "1.2rem",
+        color: "#d90c0c"
+      },
+      children: title2
+    }
+  ),
+  /* @__PURE__ */ jsxRuntimeExports.jsx("p", { children: price && /* @__PURE__ */ jsxRuntimeExports.jsxs(jsxRuntimeExports.Fragment, { children: [
+    "Цена: ",
+    formatPrice(Number(price))
+  ] }) })
 ] });
 const NavigationButton = ({
   icon,
@@ -11246,16 +11311,16 @@ const Carousel = ({ children }) => {
     React.Children.map(children, (child, i) => /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: classes$4["card-container"], style: getCardStyle({ isActive: i === active, offset: active - i }), children: child }))
   ] });
 };
-const InteractiveGallery = () => /* @__PURE__ */ jsxRuntimeExports.jsx(Carousel, { children: CARDS.map(({ content: content2, price, title: title2 }, i) => /* @__PURE__ */ jsxRuntimeExports.jsx(
+const InteractiveGallery = () => /* @__PURE__ */ jsxRuntimeExports.jsx(Carousel, { children: CARDS.map(({ price, name }, i) => /* @__PURE__ */ jsxRuntimeExports.jsx(
   Card,
   {
-    title: title2,
-    content: content2,
+    title: name,
+    content: "",
     price
   },
   i
 )) });
-const outServicessWrapper = "_outServicessWrapper_aslrl_1";
+const outServicessWrapper = "_outServicessWrapper_zqimt_1";
 const classes$3 = {
   outServicessWrapper
 };
@@ -11285,10 +11350,10 @@ const OurServicess = () => {
     /* @__PURE__ */ jsxRuntimeExports.jsx(InteractiveGallery, {})
   ] });
 };
-const rootWrapper = "_rootWrapper_s3mvh_1";
-const boxContent = "_boxContent_s3mvh_11";
-const formWrapper = "_formWrapper_s3mvh_21";
-const formTitle = "_formTitle_s3mvh_36";
+const rootWrapper = "_rootWrapper_125dz_1";
+const boxContent = "_boxContent_125dz_11";
+const formWrapper = "_formWrapper_125dz_21";
+const formTitle = "_formTitle_125dz_36";
 const classes$2 = {
   rootWrapper,
   boxContent,
@@ -11346,15 +11411,11 @@ const RequestForm = () => {
     e.preventDefault();
     setFormState(initFormState$2);
   };
-  return /* @__PURE__ */ jsxRuntimeExports.jsx(jsxRuntimeExports.Fragment, { children: /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: styles$2.app, style: { backgroundImage: `url(${background})` }, children: [
+  return /* @__PURE__ */ jsxRuntimeExports.jsx(jsxRuntimeExports.Fragment, { children: /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: styles$2.app, style: { backgroundImage: `url(${background})`, filter: "grayscale(50%)" }, children: [
     /* @__PURE__ */ jsxRuntimeExports.jsx("img", { src: ellipse, className: styles$2.ellipse, alt: "ellipse background" }),
     /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: styles$2.headerSection, children: [
       /* @__PURE__ */ jsxRuntimeExports.jsx("h1", { className: styles$2.title, children: "Оценка стоимости ремонта по фото" }),
-      /* @__PURE__ */ jsxRuntimeExports.jsxs("p", { className: styles$2.description, children: [
-        "Отправьте фото поврежденной детали нам через WhatsApp на номер или на электронную почту ",
-        /* @__PURE__ */ jsxRuntimeExports.jsx("a", { href: "mailto:D.Nesterov@mail.ru", className: styles$2.linkMail, children: "D.Nesterov@mail.ru" }),
-        " и наши мастера оценят примерную стоимость ремонта"
-      ] }),
+      /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: styles$2.description, children: "Отправьте фото поврежденной детали нам через WhatsApp  и наши специалисты оценят примерную стоимость ремонта" }),
       /* @__PURE__ */ jsxRuntimeExports.jsx("a", { className: styles$2.phoneNumber, href: "tel:+79624400580", children: "+7 (962) 440-05-80" })
     ] }),
     /* @__PURE__ */ jsxRuntimeExports.jsx("img", { src: phoneImage, className: styles$2.phoneImage, alt: "Phone" }),
@@ -11484,6 +11545,9 @@ const Main = () => {
             width: "295px",
             height: "213px",
             fontSize: "20px",
+            position: "relative",
+            left: "1%",
+            top: "4%",
             fontWeight: "bold",
             lineHeight: "40px",
             display: "flex",
@@ -11544,7 +11608,7 @@ const Main = () => {
         }
       ),
       /* @__PURE__ */ jsxRuntimeExports.jsxs(Box, { component: "form", className: classes$2.formWrapper, children: [
-        /* @__PURE__ */ jsxRuntimeExports.jsx(Text, { className: classes$2.formTitle, children: "Получить окраску 3ей детали в подарок" }),
+        /* @__PURE__ */ jsxRuntimeExports.jsx(Text, { className: classes$2.formTitle, children: "Получить окраску 4-й детали в подарок" }),
         /* @__PURE__ */ jsxRuntimeExports.jsx(CustomInput, { placeholder: "имя", cb: (event) => handleChange(event, "name"), value: formState.name }),
         /* @__PURE__ */ jsxRuntimeExports.jsx(CustomInput, { placeholder: "Телефон", cb: (event) => handleChange(event, "phone"), value: formState.phone }),
         /* @__PURE__ */ jsxRuntimeExports.jsx(
@@ -11593,21 +11657,25 @@ const classes$1 = {
 const Header = () => {
   return /* @__PURE__ */ jsxRuntimeExports.jsxs("header", { className: classes$1.wrapperRoot, children: [
     /* @__PURE__ */ jsxRuntimeExports.jsxs(Box, { className: classes$1.wrapperBox, children: [
-      /* @__PURE__ */ jsxRuntimeExports.jsx(
+      /* @__PURE__ */ jsxRuntimeExports.jsxs(
         "span",
         {
           style: {
             fontWeight: "bold",
             textTransform: "uppercase"
           },
-          children: "Доктор жесть"
+          children: [
+            "Центр кузовного ремонта автомобилей ",
+            /* @__PURE__ */ jsxRuntimeExports.jsx("br", {}),
+            " «Доктор Жесть»"
+          ]
         }
       ),
       /* @__PURE__ */ jsxRuntimeExports.jsx("span", { children: /* @__PURE__ */ jsxRuntimeExports.jsx("a", { href: "mailto:D.Nesterov@mail.ru", className: classes$1.linkMail, children: "Еmail: D.Nesterov@mail.ru" }) })
     ] }),
     /* @__PURE__ */ jsxRuntimeExports.jsx(Box, { children: /* @__PURE__ */ jsxRuntimeExports.jsx(SvgVkIconSvg, {}) }),
     /* @__PURE__ */ jsxRuntimeExports.jsxs(Box, { className: classes$1.wrapperBox, style: { textAlign: "right" }, children: [
-      /* @__PURE__ */ jsxRuntimeExports.jsx("span", { children: /* @__PURE__ */ jsxRuntimeExports.jsx("a", { href: "tel:+79624400580", className: classes$1.phoneNumber, children: "+7 (962) 440-05-80" }) }),
+      /* @__PURE__ */ jsxRuntimeExports.jsx("span", { children: /* @__PURE__ */ jsxRuntimeExports.jsx("a", { href: "tel:+79624400580", className: classes$1.phoneNumber, children: "+7 (962) 441-00-51" }) }),
       /* @__PURE__ */ jsxRuntimeExports.jsx("span", { children: "г.Ставрополь, ул.Шпаковская, 97" })
     ] })
   ] });
@@ -11617,7 +11685,7 @@ const classes = {
   footerWrapper
 };
 const Footer = () => {
-  return /* @__PURE__ */ jsxRuntimeExports.jsx("footer", { className: classes.footerWrapper, children: "Доктор жесть Еmail: D.Nesterov@mail.ru © г.Ставрополь, ул.Шпаковская, 97" });
+  return /* @__PURE__ */ jsxRuntimeExports.jsx("footer", { className: classes.footerWrapper, children: "ЦКР «Доктор Жесть» Еmail: D.Nesterov@mail.ru © г.Ставрополь, ул.Шпаковская, 97" });
 };
 const App = () => {
   return /* @__PURE__ */ jsxRuntimeExports.jsxs(ContextWrapper, { children: [

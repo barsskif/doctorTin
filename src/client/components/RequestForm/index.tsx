@@ -31,7 +31,7 @@ export const RequestForm: React.FC = () => {
     
     return (
         <>
-        <div className={styles.app} style={{ backgroundImage: `url(${background})`, filter: 'grayscale(50%)' }}>
+        <div className={styles.app} style={{ backgroundImage: `url(${background})` }}>
             <img src={ellipse} className={styles.ellipse} alt="ellipse background" />
             <div className={styles.headerSection}>
                 <h1 className={styles.title}>Оценка стоимости ремонта по фото</h1>

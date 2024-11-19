@@ -9,12 +9,26 @@ import type { ICardProps, ICarouselProps } from "./@types";
 import classes from "./InteractiveGallery.module.css";
 import {CARDS} from './constants'
 
+const formatPrice = (price: number): string => {
+    return price.toLocaleString('ru-RU', { style: 'decimal', minimumFractionDigits: 0 }) + ' ₽';
+};
 
-const Card = ({ title, content, price }: ICardProps): ReactElement => (
-  <div className={classes.card}>
+
+const Card = ({ title, content, price, isActive }: ICardProps): ReactElement => (
+  <div className={classes.card} style={{
+    border: isActive ? '1px solid #d90c0c' : '',
+  }}>
     {/* <h2>{title}</h2> */}
-    <p style={{ textAlign: "center", maxWidth: "300px" }}>{title}</p>
-    <p>{price && <>Цена: {price}</>}</p>
+    <p 
+    style={{ 
+      textAlign: "center", 
+      maxWidth: "300px", 
+      fontWeight: "bold", 
+      fontSize: "1.2rem", 
+      color:'#d90c0c'
+       }}
+       >{title}</p>
+    <p>{price && <>Цена: {formatPrice(Number(price))}</>}</p>
     {/* <p>{price}</p> */}
   </div>
 );
@@ -33,8 +47,7 @@ const NavigationButton = ({
   </button>
 );
 
-const Carousel = ({ children }: ICarouselProps): ReactElement => {
-  const [active, setActive] = useState<number>(1);
+const Carousel = ({ children, active, setActive }: ICarouselProps): ReactElement => {
   const count: number = React.Children.count(children);
 
   const handleNext = (): void => {
@@ -58,7 +71,10 @@ const Carousel = ({ children }: ICarouselProps): ReactElement => {
         <NavigationButton icon={<NextIcon />} onClick={handleNext} className={`${classes.nav} ${classes.right}`} />
       )}
       {React.Children.map(children, (child: ReactNode, i: number) => (
-        <div className={classes["card-container"]} style={getCardStyle({ isActive: i === active, offset: active - i })}>
+        <div
+         className={classes["card-container"]} 
+         style={getCardStyle({ isActive: i === active, offset: active - i })}
+         >
           {child}
         </div>
       ))}
@@ -66,15 +82,18 @@ const Carousel = ({ children }: ICarouselProps): ReactElement => {
   );
 };
 
-export const InteractiveGallery = (): ReactElement => (
-  <Carousel>
+export const InteractiveGallery = (): ReactElement => {
+    const [active, setActive] = useState<number>(1);
+
+ return  <Carousel active={active} setActive={setActive}>
     {CARDS.map(({price, name}, i: number) => (
       <Card
         key={i}
+        isActive={active === i}
         title={name}
         content={''}
         price={price}
       />
     ))}
   </Carousel>
-);
+};

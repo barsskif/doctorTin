@@ -8,7 +8,7 @@
   height: calc(2.5rem * var(--mantine-scale));
   font-size: calc(0.8125rem * var(--mantine-scale));
 }
-._aboutWrapper_10icg_1 {
+._aboutWrapper_mxjc2_1 {
   background-color: black;
   display: flex;
   justify-content: center;
@@ -18,24 +18,26 @@
   flex-direction: column;
 }
 
-._aboutTextBlock_10icg_11 {
-  max-width: 389px;
+._aboutTextBlock_mxjc2_11 {
+  max-width: 70%;
   display: flex;
   flex-direction: column;
   gap: 10px;
-  margin-top: 20px;
+  margin-top: 7px;
 }
 
-._aboutImage_10icg_19 {
+._aboutImage_mxjc2_19 {
   position: absolute;
   top: 0;
   right: 0;
   height: 74vh;
   width: 100%;
   opacity: 0.9;
+  /* filter: blur(5px); */
+  filter: grayscale(100%);
 }
 
-._boxContent_10icg_28 {
+._boxContent_mxjc2_30 {
   max-width: 1154px;
   width: 100%; /* Меняем ширину на 100% для адаптивности */
   display: flex;
@@ -47,7 +49,7 @@
   position: relative;
 }
 
-._card_10icg_40 {
+._card_mxjc2_42 {
   display: flex;
   flex-direction: column;
   max-width: 274px;
@@ -55,54 +57,54 @@
   align-items: center;
 }
 
-._cardText_10icg_48 {
+._cardText_mxjc2_50 {
   text-align: center;
   font-size: 20px !important;
   font-weight: bold !important;
   line-height: 25px !important;
 }
 
-._videoBlock_10icg_55 {
+._videoBlock_mxjc2_57 {
   height: auto; /* Изменяем на auto для адаптивности */
   width: 100%; /* Меняем на 100% для адаптивности */
   gap: 20px;
 }
 
-._aboutTextBlockDescroption_10icg_61 {
+._aboutTextBlockDescroption_mxjc2_63 {
   line-height: normal;
   letter-spacing: 0;
 }
 
 /* Медиазапрос для мобильных устройств */
 @media (max-width: 768px) {
-  ._aboutWrapper_10icg_1 {
+  ._aboutWrapper_mxjc2_1 {
     height: auto; /* Уменьшаем высоту для мобильных устройств */
   }
 
-  ._aboutImage_10icg_19 {
+  ._aboutImage_mxjc2_19 {
     width: 100vw; /* Изменяем на 100vw для мобильных */
     height: auto; /* Авто-координация при изменении пропорций */
   }
 
-  ._boxContent_10icg_28 {
+  ._boxContent_mxjc2_30 {
     flex-direction: column; /* Меняем направление на колонку */
     align-items: center; /* Центруем элементы */
     padding: 0 10px; /* Добавим отступы для мобильных */
   }
 
-  ._videoBlock_10icg_55 {
+  ._videoBlock_mxjc2_57 {
     flex-direction: column; /* Меняем направление на колонку */
     height: auto; /* Убираем жесткую высоту */
   }
 
-  ._aboutTextBlock_10icg_11 {
+  ._aboutTextBlock_mxjc2_11 {
     max-width: 90%; /* Увеличиваем ширину для мобильных */
   }
 
-  ._cardText_10icg_48 {
+  ._cardText_mxjc2_50 {
     font-size: 16px !important; /* Уменьшаем размер шрифта для мобильных */
   }
-}._carousel_9tdsj_7 {
+}._carousel_4e5of_7 {
   position: relative;
   width: 23rem;
   height: 23rem;
@@ -111,18 +113,18 @@
   margin-top: 100px;
 }
 
-._card-container_9tdsj_16 {
+._card-container_4e5of_16 {
   position: absolute;
   width: 100%;
   height: 100%;
-  transform: rotateY(calc(var(--offset) * 50deg)) scaleY(calc(1 + var(--abs-offset) * -0.4))
-    translateZ(calc(var(--abs-offset) * -30rem)) translateX(calc(var(--direction) * -15rem));
-  filter: blur(calc(var(--abs-offset) * 1rem));
+  transform: rotateY(calc(var(--offset) * 50deg)) scaleY(calc(1 + var(--abs-offset) * -0.7))
+    translateZ(calc(var(--abs-offset) * -30rem)) translateX(calc(var(--direction) * -19rem));
+  filter: blur(calc(var(--abs-offset) * 0.3rem));
   transition: all 0.3s ease-out;
   z-index: var(--z-index);
 }
 
-._card_9tdsj_16 {
+._card_4e5of_16 {
   width: 406px;
   height: 424px;
   padding: 2rem;
@@ -137,7 +139,7 @@
   flex-direction: column;
 }
 
-._card_9tdsj_16 h2 {
+._card_4e5of_16 h2 {
     text-align: center;
     font-size: 2rem;
     font-weight: bold;
@@ -146,13 +148,13 @@
 
   }
 
-._card_9tdsj_16 p,
-  ._card_9tdsj_16 h2 {
+._card_4e5of_16 p,
+  ._card_4e5of_16 h2 {
     transition: all 0.3s ease-out;
     opacity: var(--active);
   }
 
-._nav_9tdsj_58 {
+._nav_4e5of_58 {
   color: white;
   font-size: 5rem;
   position: absolute;
@@ -167,15 +169,23 @@
   border: unset;
 }
 
-._nav_9tdsj_58._left_9tdsj_72 {
+._nav_4e5of_58._left_4e5of_72 {
     transform: translateX(-100%) translateY(-50%);
   }
 
-._nav_9tdsj_58._right_9tdsj_76 {
+._nav_4e5of_58._left_4e5of_72 svg > path {
+      fill: red
+    }
+
+._nav_4e5of_58._right_4e5of_79 {
     right: 0;
     transform: translateX(160%) translateY(-50%);
   }
-._outServicessWrapper_aslrl_1 {
+
+._nav_4e5of_58._right_4e5of_79 svg > path {
+      fill: red
+    }
+._outServicessWrapper_zqimt_1 {
   background-image: url(/assets/OurServicess-1be2f086.png);
   background-position: top;
   background-repeat: no-repeat;
@@ -188,8 +198,9 @@
   position: relative;
   height: 80vh;
   flex-direction: column;
+  overflow: hidden;
 }
-._rootWrapper_s3mvh_1 {
+._rootWrapper_125dz_1 {
   background-image: url(/assets/bg-5284a75b.png);
   background-position: top;
   background-repeat: no-repeat;
@@ -199,7 +210,7 @@
   align-items: flex-start;
 }
 
-._boxContent_s3mvh_11 {
+._boxContent_125dz_11 {
   height: 65vh;
   display: flex;
   align-items: flex-end;
@@ -209,7 +220,7 @@
   position: relative;
 }
 
-._formWrapper_s3mvh_21 {
+._formWrapper_125dz_21 {
   height: 213px;
   width: 412px;
   background-image: url(/assets/FormBg-3137539c.png);
@@ -225,31 +236,31 @@
   gap: 8px;
 }
 
-._formWrapper_s3mvh_21 ._formTitle_s3mvh_36 {
+._formWrapper_125dz_21 ._formTitle_125dz_36 {
     font-weight: 700;
     font-size: 16px;
-    max-width: 67%;
+    max-width: 90%;
   }
 
 
 @media (max-width: 768px) {
-  ._boxContent_s3mvh_11 {
+  ._boxContent_125dz_11 {
     flex-direction: column;
     align-items: center;
     gap: 20px; 
   }
 
-  ._formWrapper_s3mvh_21 {
+  ._formWrapper_125dz_21 {
     width: 90%;
     height: auto;
     padding: 14px;
   }
 
-  ._formTitle_s3mvh_36 {
+  ._formTitle_125dz_36 {
     font-size: 14px;
   }
 
-  ._rootWrapper_s3mvh_1 {
+  ._rootWrapper_125dz_1 {
     padding: 10px; /* добавляем отступ по краям для мобильных */
   }
 }._app_g9vch_1 {

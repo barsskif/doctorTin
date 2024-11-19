@@ -40,7 +40,7 @@ const Main = () => {
               fontSize: "20px",
               position: 'relative',
               left: '1%',
-              top: '1%',
+              top: '4%',
               fontWeight: "bold",
               lineHeight: "40px",
               display: "flex",
@@ -87,7 +87,7 @@ const Main = () => {
             </span>
           </Box>
           <Box component="form" className={classes.formWrapper}>
-            <Text className={classes.formTitle}>Получить окраску 4ей детали в подарок</Text>
+            <Text className={classes.formTitle}>Получить окраску 4-й детали в подарок</Text>
             <CustomInput placeholder="имя" cb={(event) => handleChange(event, 'name')} value={formState.name}/>
             <CustomInput placeholder="Телефон"  cb={(event) => handleChange(event, 'phone')} value={formState.phone}/>
 

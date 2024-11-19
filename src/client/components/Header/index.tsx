@@ -13,7 +13,7 @@ export const Header = () => {
             textTransform: "uppercase",
           }}
         >
-          Доктор жесть
+          Центр кузовного ремонта автомобилей <br /> «Доктор Жесть»
         </span>
         <span><a href="mailto:D.Nesterov@mail.ru" className={classes.linkMail}>Еmail: D.Nesterov@mail.ru</a></span>
       </Box>
@@ -21,7 +21,7 @@ export const Header = () => {
         <VkIconSvg />
       </Box>
       <Box className={classes.wrapperBox} style={{ textAlign: "right" }}>
-        <span><a href='tel:+79624400580' className={classes.phoneNumber}>+7 (962) 440-05-80</a></span>
+        <span><a href='tel:+79624400580' className={classes.phoneNumber}>+7 (962) 441-00-51</a></span>
         <span>г.Ставрополь, ул.Шпаковская, 97</span>
       </Box>
     </header>
