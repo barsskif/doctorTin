@@ -11268,7 +11268,9 @@ const CARDS = [
 const formatPrice = (price) => {
   return price.toLocaleString("ru-RU", { style: "decimal", minimumFractionDigits: 0 }) + " ₽";
 };
-const Card = ({ title: title2, content: content2, price }) => /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: classes$4.card, children: [
+const Card = ({ title: title2, content: content2, price, isActive }) => /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: classes$4.card, style: {
+  border: isActive ? "1px solid #d90c0c" : ""
+}, children: [
   /* @__PURE__ */ jsxRuntimeExports.jsx(
     "p",
     {
@@ -11292,8 +11294,7 @@ const NavigationButton = ({
   onClick,
   className
 }) => /* @__PURE__ */ jsxRuntimeExports.jsx("button", { className, onClick, children: icon });
-const Carousel = ({ children }) => {
-  const [active, setActive] = reactExports.useState(1);
+const Carousel = ({ children, active, setActive }) => {
   const count = React.Children.count(children);
   const handleNext = () => {
     if (active < count - 1) {
@@ -11308,18 +11309,29 @@ const Carousel = ({ children }) => {
   return /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: classes$4.carousel, children: [
     active > 0 && /* @__PURE__ */ jsxRuntimeExports.jsx(NavigationButton, { icon: /* @__PURE__ */ jsxRuntimeExports.jsx(SvgPrevIcon, {}), onClick: handlePrev, className: `${classes$4.nav} ${classes$4.left}` }),
     active < count - 1 && /* @__PURE__ */ jsxRuntimeExports.jsx(NavigationButton, { icon: /* @__PURE__ */ jsxRuntimeExports.jsx(SvgNextIcon, {}), onClick: handleNext, className: `${classes$4.nav} ${classes$4.right}` }),
-    React.Children.map(children, (child, i) => /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: classes$4["card-container"], style: getCardStyle({ isActive: i === active, offset: active - i }), children: child }))
+    React.Children.map(children, (child, i) => /* @__PURE__ */ jsxRuntimeExports.jsx(
+      "div",
+      {
+        className: classes$4["card-container"],
+        style: getCardStyle({ isActive: i === active, offset: active - i }),
+        children: child
+      }
+    ))
   ] });
 };
-const InteractiveGallery = () => /* @__PURE__ */ jsxRuntimeExports.jsx(Carousel, { children: CARDS.map(({ price, name }, i) => /* @__PURE__ */ jsxRuntimeExports.jsx(
-  Card,
-  {
-    title: name,
-    content: "",
-    price
-  },
-  i
-)) });
+const InteractiveGallery = () => {
+  const [active, setActive] = reactExports.useState(1);
+  return /* @__PURE__ */ jsxRuntimeExports.jsx(Carousel, { active, setActive, children: CARDS.map(({ price, name }, i) => /* @__PURE__ */ jsxRuntimeExports.jsx(
+    Card,
+    {
+      isActive: active === i,
+      title: name,
+      content: "",
+      price
+    },
+    i
+  )) });
+};
 const outServicessWrapper = "_outServicessWrapper_zqimt_1";
 const classes$3 = {
   outServicessWrapper
@@ -11360,20 +11372,20 @@ const classes$2 = {
   formWrapper,
   formTitle
 };
-const app = "_app_g9vch_1";
-const ellipse$1 = "_ellipse_g9vch_12";
-const phoneImage$1 = "_phoneImage_g9vch_21";
-const headerSection = "_headerSection_g9vch_29";
-const title = "_title_g9vch_36";
-const description = "_description_g9vch_43";
-const linkMail$1 = "_linkMail_g9vch_51";
-const phoneNumber$1 = "_phoneNumber_g9vch_56";
-const contactForm = "_contactForm_g9vch_64";
-const formGroup = "_formGroup_g9vch_71";
-const label$1 = "_label_g9vch_75";
-const input$1 = "_input_g9vch_82";
-const buttonGroup = "_buttonGroup_g9vch_93";
-const button$1 = "_button_g9vch_93";
+const app = "_app_dg1qi_1";
+const ellipse$1 = "_ellipse_dg1qi_13";
+const phoneImage$1 = "_phoneImage_dg1qi_22";
+const headerSection = "_headerSection_dg1qi_30";
+const title = "_title_dg1qi_37";
+const description = "_description_dg1qi_44";
+const linkMail$1 = "_linkMail_dg1qi_52";
+const phoneNumber$1 = "_phoneNumber_dg1qi_57";
+const contactForm = "_contactForm_dg1qi_65";
+const formGroup = "_formGroup_dg1qi_72";
+const label$1 = "_label_dg1qi_76";
+const input$1 = "_input_dg1qi_83";
+const buttonGroup = "_buttonGroup_dg1qi_94";
+const button$1 = "_button_dg1qi_94";
 const styles$2 = {
   app,
   ellipse: ellipse$1,
@@ -11411,7 +11423,7 @@ const RequestForm = () => {
     e.preventDefault();
     setFormState(initFormState$2);
   };
-  return /* @__PURE__ */ jsxRuntimeExports.jsx(jsxRuntimeExports.Fragment, { children: /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: styles$2.app, style: { backgroundImage: `url(${background})`, filter: "grayscale(50%)" }, children: [
+  return /* @__PURE__ */ jsxRuntimeExports.jsx(jsxRuntimeExports.Fragment, { children: /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: styles$2.app, style: { backgroundImage: `url(${background})` }, children: [
     /* @__PURE__ */ jsxRuntimeExports.jsx("img", { src: ellipse, className: styles$2.ellipse, alt: "ellipse background" }),
     /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: styles$2.headerSection, children: [
       /* @__PURE__ */ jsxRuntimeExports.jsx("h1", { className: styles$2.title, children: "Оценка стоимости ремонта по фото" }),

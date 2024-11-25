@@ -88,7 +88,7 @@ const Main = () => {
           </Box>
           <Box component="form" className={classes.formWrapper}>
             <Text className={classes.formTitle}>Получить окраску 4-й детали в подарок</Text>
-            <CustomInput placeholder="имя" cb={(event) => handleChange(event, 'name')} value={formState.name}/>
+            <CustomInput placeholder="Имя" cb={(event) => handleChange(event, 'name')} value={formState.name}/>
             <CustomInput placeholder="Телефон"  cb={(event) => handleChange(event, 'phone')} value={formState.phone}/>
 
             <Button

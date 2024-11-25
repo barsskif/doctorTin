@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 import styles from './FormSection.module.css';
 import { StrokeDigit } from '../StrokeDigit';
 import Car from '../../../../assets/group-17.svg';
+import { CustomInput } from '../CustomInput';
+import { Box, Button } from '@mantine/core';
 
 const initFormState = {
     name: '',
@@ -42,13 +44,16 @@ export const FormSection: React.FC = () => {
                         </div>
                     </div>
                     <form className={styles.form}>
-                        <div className={styles.inputGroup}>
-                            <input type="text" className={styles.input} placeholder="Имя" onChange={(event)=> handleChange(event, 'name')} value={formState.name}/>
-                        </div>
-                        <div className={styles.inputGroup}>
-                            <input type="text" className={styles.input} placeholder="Телефон" onChange={(event)=> handleChange(event, 'phone')} value={formState.phone}/>
-                        </div>
-                        <button type="submit" className={styles.button} onClick={handleSubmit}>Оставить заявку</button>
+                    <CustomInput placeholder="Имя" cb={(event) => handleChange(event, 'name')} value={formState.name} />
+                    <CustomInput placeholder="Телефон" cb={(event) => handleChange(event, 'phone')} value={formState.phone} />
+                    <Box>
+                        <Button onClick={handleSubmit} color="#900000"
+                            style={{
+                                width: 199,
+                                margin: "0 auto",
+                                height: "46px",
+                            }}>Отправить</Button>
+                    </Box>
                     </form>
                 </div>
             </div>

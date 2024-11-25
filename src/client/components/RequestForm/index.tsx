@@ -7,12 +7,14 @@ import rectangle4 from '../../../../assets/rectangle-4.svg';
 import background from '../../../../assets/group.svg';
 import phoneImage from '../../../../assets/i-phone-12-pro-1.svg';
 import ellipse from '../../../../assets/ellipse-25.svg';
+import { CustomInput } from '../CustomInput';
+import { Box, Button } from '@mantine/core';
 
 const initFormState = {
     name: '',
     phone: '',
-  }
-  
+}
+
 
 export const RequestForm: React.FC = () => {
     const [formState, setFormState] = useState(initFormState)
@@ -21,59 +23,42 @@ export const RequestForm: React.FC = () => {
         const value = e.target.value
         setFormState(prev => ({ ...prev, [key]: value }))
     }
-  
+
     const handleSubmit = (e: React.MouseEvent<HTMLButtonElement, MouseEvent>) => {
         e.preventDefault()
         setFormState(initFormState)
     }
 
-    
-    
+
+
     return (
         <>
-        <div className={styles.app} style={{ backgroundImage: `url(${background})` }}>
-            <img src={ellipse} className={styles.ellipse} alt="ellipse background" />
-            <div className={styles.headerSection}>
-                <h1 className={styles.title}>Оценка стоимости ремонта по фото</h1>
-                <p className={styles.description}>
-                    Отправьте фото поврежденной детали нам через WhatsApp  и наши специалисты оценят примерную стоимость ремонта
-                </p>
-                <a className={styles.phoneNumber} href='tel:+79624400580'>+7 (962) 440-05-80</a>
-            </div>
-            <img src={phoneImage} className={styles.phoneImage} alt="Phone" />
-            <div className={styles.contactForm}>
-                <div className={styles.formGroup}>
-                    <label className={styles.label}>Имя</label>
-                    <input 
-                    type="text" 
-                    className={styles.input} 
-                    style={{ backgroundImage: `url(${rectangle1})` }} 
-                    onChange={(event) => handleChange(event, 'name')} 
-                    value={formState.name}
-                    />
+            <div className={styles.app} style={{ backgroundImage: `url(${background})` }}>
+                <img src={ellipse} className={styles.ellipse} alt="ellipse background" />
+                <div className={styles.headerSection}>
+                    <h1 className={styles.title}>Оценка стоимости ремонта по фото</h1>
+                    <p className={styles.description}>
+                        Отправьте фото поврежденной детали нам через WhatsApp  и наши специалисты оценят примерную стоимость ремонта
+                    </p>
+                    <a className={styles.phoneNumber} href='tel:+79624400580'>+7 (962) 440-05-80</a>
                 </div>
-                <div className={styles.formGroup}>
-                    <label className={styles.label}>Телефон</label>
-                    <input 
-                    type="text" 
-                    className={styles.input} 
-                    style={{ backgroundImage: `url(${rectangle2})` }} 
-                    onChange={(event) => handleChange(event, 'phone')} 
-                    value={formState.phone}
-                    />
-                </div>
-                <div className={styles.buttonGroup}>
-                    <button className={styles.button} style={{ backgroundImage: `url(${rectangle3})` }}>
-                        Добавить фото
-                    </button>
-                    <button className={styles.button} style={{ backgroundImage: `url(${rectangle4})` }} onClick={handleSubmit}>
-                        Оставить заявку
-                    </button>
-                </div>
-            </div>
-        </div>
+                <img src={phoneImage} className={styles.phoneImage} alt="Phone" />
+                <div className={styles.contactForm}>
+                    <CustomInput placeholder="Имя" cb={(event) => handleChange(event, 'name')} value={formState.name} />
+                    <CustomInput placeholder="Телефон" cb={(event) => handleChange(event, 'phone')} value={formState.phone} />
+                    <Box>
+                        <Button onClick={handleSubmit} color="#900000"
+                            style={{
+                                width: 199,
+                                margin: "0 auto",
+                                height: "46px",
+                            }}>Отправить</Button>
+                    </Box>
 
-</>
+                </div>
+            </div>
+
+        </>
 
     );
 };
